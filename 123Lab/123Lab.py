@@ -1,44 +1,28 @@
 def main():
-    print("start here")
     print ("Bellarmine student current grade point average")
-    schoolgrade= int(input( "What grade are you in-"))
-    #call getYearInSchool with input as an argument
-    ## 1 argument gets passed to getYearInSchool
-    #getYearInSchool()
-    ##print long grade
+    numList1= [ 93.4, 86.8, 98.2, 89.9, 94.6]
+    gradeIn= input("What year are you in school?- ")
+    grade1= int(gradeIn)
+    print("you are" + str(gradeIn))
+    print (" your current average score is-" + str(getAverage(numList1)))
+    print ("your current letter grade is-" + str(getLetterGrade(getAverage(numList1))))
 
-    ## create a list of 4 to 6 grades
-    ## cal calcAverageGrade function with list and number in list as arguments
-    ## 2 arguments get passed to calcAverageGrade
-    #getAverage()
-    ## print average grade
-
-    ## call getLetterGrade funciton with average grade as argument
-    ## 1 argument gets passed to getLetterGrade
-    #getLetterGrade()
-    ## print letter grade
-    ## determine letter grade is passing or failing and print
-
-    Mylist= [9,10,11,12]
-    Mylist2= [ 60.0,70.0,80.0,90.0]
+def getYearInSchool(gradeIn):
+    if gradeIn == 12:
+        return "a senior"
+    elif gradeIn == 11:
+        return "a junior"
+    elif gradeIn == 10:
+        return "a sophmore"
+    elif gradeIn == 9:
+        return "a freshmen"
+    else:
+        return " you're not in highschool yet"
 
 
-
-
-
-
-
-def getYearInSchool():
-    print("getYearInSchool")
-    ## get long grade and return long grade to main
-
-
-
-
-
-
-def getAverage():
-    print("getAverage")
+def getAverage(numList1):
+    average = sum(numList1) / float(len(numList1))
+    return(average)
     ## calculate average grade and return value to main
 
 
@@ -47,18 +31,17 @@ def getAverage():
 
 
 
-def getLetterGrade():
-    ## get letter grade and return letter grade to main
-    print("getLetterGrade")
-    if averagegrade >= 90
-        print("A")
-    if averagegrade == 80
-        print("B")
-    if averagegrade == 70
-        print("C")
-    if averagegrade ==60
-        print("F")
+def getLetterGrade(getAverage):
+    if getAverage >= 90:
+        lettergrade = ("A")
+    elif getAverage >= 80:
+        lettergrade = ("B")
+    elif getAverage >= 70:
+        lettergrade = ("C")
+    elif getAverage >= 60:
+        letterGrade = ("D")
+    else:
+        lettergrade = ("F")
+    return(letterGrade)
 
-
-
-#main()
+main()
