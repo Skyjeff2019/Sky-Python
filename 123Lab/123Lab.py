@@ -9,39 +9,33 @@ def main():
 
 def getYearInSchool(gradeIn):
     if gradeIn == 12:
-        return "a senior"
+        return (str("a senior"))
     elif gradeIn == 11:
-        return "a junior"
+        return (str("a junior"))
     elif gradeIn == 10:
-        return "a sophmore"
+        return (str("a sophmore"))
     elif gradeIn == 9:
-        return "a freshmen"
+        return (str("a freshmen"))
     else:
-        return " you're not in highschool yet"
+        return (str(" you're not in highschool yet"))
 
 
-def getAverage(numList1):
-    average = sum(numList1) / float(len(numList1))
-    return(average)
-    ## calculate average grade and return value to main
-
-
-
+def getAverage():
 
 
 
 
 def getLetterGrade(getAverage):
     if getAverage >= 90:
-        lettergrade = ("A")
+        lettergrade = (str("A"))
     elif getAverage >= 80:
-        lettergrade = ("B")
+        lettergrade = (str("B"))
     elif getAverage >= 70:
-        lettergrade = ("C")
+        lettergrade = (str("C"))
     elif getAverage >= 60:
-        letterGrade = ("D")
+        letterGrade = (str("D"))
     else:
-        lettergrade = ("F")
+        lettergrade = (str("F"))
     return(letterGrade)
 
 main()
