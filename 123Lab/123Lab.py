@@ -4,7 +4,7 @@ def main() :
     strGrade = getgrade(gradeYear)
     print (strGrade)
     avgGrade = [92.5,95.6,96.6,98.9]
-    theAvggrade = avggpa(avgGrade,len(avgGrade))
+    theAvggrade = avgmygpa(avgGrade,len(avgGrade))
     strPercent = lettergrade(theAvggrade)
     print(strPercent)
     if strPercent == 'You have an A' or strPercent == 'You have a B' or strPercent == 'You have a C':
@@ -28,7 +28,7 @@ def getgrade(gradeYear):
             return('You are not in highschool')
 
 
-def avggpa(mylist,num) :
+def avgmygpa(mylist,num) :
 
         x = mylist[0] + mylist[1] + mylist[2] + mylist[3]
         y = x / 4
