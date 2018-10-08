@@ -1,11 +1,8 @@
 def main():
-
     mystring = input('Input your string here - ')
-
     print(deVowel(mystring))
 
 def deVowel(mystring):
-
     noVowel = ''
 
     for x in mystring:
@@ -20,3 +17,8 @@ def deVowel(mystring):
     return (noVowel)
 
 main()
+
+
+def mathstuff():
+    myList = [1,2,3,4]
+
