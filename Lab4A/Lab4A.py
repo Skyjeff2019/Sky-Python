@@ -16,9 +16,13 @@ def deVowel(mystring):
 
     return (noVowel)
 
-main()
+#main()
 
 
-def mathstuff():
-    myList = [1,2,3,4]
+def mathstuff(myList):
+    for num in myList:
+        print('the number is ' + str(num*2))
 
+myList= [1, 3, 4, 5]
+
+mathstuff(myList)
