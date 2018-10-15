@@ -1,6 +1,7 @@
 def main():
     mystring = input('Input your string here - ')
     print(deVowel(mystring))
+    print(mathstuff(myList))
 
 def deVowel(mystring):
     noVowel = ''
@@ -16,13 +17,13 @@ def deVowel(mystring):
 
     return (noVowel)
 
-#main()
+
 
 
 def mathstuff(myList):
     for num in myList:
         print('the number is ' + str(num*2))
 
-myList= [1, 3, 4, 5]
+myList= [1, 2, 3, 4, 5]
 
-mathstuff(myList)
+main()
