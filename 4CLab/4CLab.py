@@ -10,7 +10,7 @@ def draw7():
 
 
 
-#main()
+main()
 
 
 def starsandstripes():
@@ -18,8 +18,9 @@ def starsandstripes():
         starstring=""
         dashstring=""
 
-    for x in range(0, 7):
+    for z in range(0, 7):
         starstring += '*'
+        dashstring += '-'
 
     print(starstring)
     print(dashstring)

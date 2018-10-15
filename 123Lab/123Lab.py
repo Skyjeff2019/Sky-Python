@@ -28,7 +28,7 @@ def getgrade(gradeYear):
             return('You are not in highschool')
 
 
-def avgmygpa(mylist,num) :
+def avgmygpa(mylist,num):
 
         x = mylist[0] + mylist[1] + mylist[2] + mylist[3]
         y = x / 4
