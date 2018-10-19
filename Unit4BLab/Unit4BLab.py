@@ -1,5 +1,5 @@
 def main () :
-    t = int(input("How far would like the loop to go? - "))
+    t = int(input("How far is the loop going to go? - "))
     func1 (t)
     print ()
 

@@ -1,29 +1,39 @@
-def main():
-    mystring = input('Input your string here - ')
-    print(deVowel(mystring))
-    print(mathstuff(myList))
+def main ():
+    g = [0] * 4
+    g [0] = float(input("Enter a number - "))
+    g [1] = float(input("Enter a number - "))
+    g [2] = float(input("Enter a number - "))
+    g [3] = float(input("Enter a number - "))
+    m = float(input("What do you want to multiply by? - "))
 
-def deVowel(mystring):
-    noVowel = ''
+    print ("Your average grades using a for loop equals " + mathStuff(g , m))
+    print ()
 
-    for x in mystring:
+    num1 = str(input ("Put in your best grade? - "))
+    num2 = str(input ("Put in your second best grade? - "))
+    num3 = str(input ("Put in your third best grade? - "))
+    num4 = str(input ("Put in your fourth best grade? - "))
+    List1 = [0] * 4
+    List1 [0] = num1
+    List1 [1] = num2
+    List1 [2] = num3
+    List1 [3] = num4
 
-        if x == 'a' or x == 'e' or x == 'i' or x == 'o' or x == 'u':
-
-            y = 'p'
-
-        else:
-            noVowel = noVowel + x
-
-    return (noVowel)
+    print ("The average of your four best grades using a for loop is - " + avgGrade(List1) + "%")
 
 
 
+def mathStuff (g , m) :
+    Listf = [] * 4
+    for x in g :
+        Listf.append(float(x) * float(m))
+    return (str(Listf))
 
-def mathstuff(myList):
-    for num in myList:
-        print('the number is ' + str(num*2))
-
-myList= [1, 2, 3, 4, 5]
+def avgGrade (List1) :
+    Val = float("0")
+    for x in List1 :
+        Val = float(Val) + int(x)
+    Avg = float(Val) / 4
+    return (str(Avg))
 
 main()

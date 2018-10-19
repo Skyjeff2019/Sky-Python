@@ -1,52 +1,70 @@
-def main() :
+def main () :
+    print("Bellarmine Student grade point average")
+    yearinschool()
+    print ()
+    grades()
 
-    gradeYear = input('What year are you in school - ')
-    strGrade = getgrade(gradeYear)
-    print (strGrade)
-    avgGrade = [92.5,95.6,96.6,98.9]
-    theAvggrade = avgmygpa(avgGrade,len(avgGrade))
-    strPercent = lettergrade(theAvggrade)
-    print(strPercent)
-    if strPercent == 'You have an A' or strPercent == 'You have a B' or strPercent == 'You have a C':
-        print('You are passing')
+
+
+def yearinschool () :
+    numGrade = int(input ("What grade are you in? - "))
+    if numGrade == 9:
+        print ("You are a freshman")
+    elif numGrade == 10:
+        print ("You are a sophmore")
+    elif numGrade == 11:
+        print ("You are a junior")
+    elif numGrade == 12:
+        print ("Your a senior")
     else:
-        print('You are failing')
+        print ("You skipped highschool!")
 
 
+def grades () :
+    num1 = float(input ("Put in your first grade number - "))
+    num2 = float(input ("Put in your second grade number - "))
+    num3 = float(input ("Put in your third grade number - "))
+    num4 = float(input ("Put in your fourth grade number - "))
 
-def getgrade(gradeYear):
-        if gradeYear == '9':
-            return('You are a freshman')
-        elif gradeYear == '10':
-            return('You are a sophmore')
-        elif gradeYear == '11':
-            return('You are a junior')
-        elif gradeYear == '12':
-            return('You are a senior')
-        else:
+    List1 = [0] * 4
+    List1 [0] = num1
+    List1 [1] = num2
+    List1 [2] = num3
+    List1 [3] = num4
 
-            return('You are not in highschool')
+    ListL = len (List1)
+    ListA = List1.pop (0) + List1.pop (0) + List1.pop (0) + List1.pop (0)
 
+    Gpa = ListA / ListL
+    print ()
+    print ("Your percentage avergae is - " + str(Gpa) )
 
-def avgmygpa(mylist,num):
+    if int(Gpa) > 90:
+        print ("Your letter grade is - A")
+        Letter = str("A")
 
-        x = mylist[0] + mylist[1] + mylist[2] + mylist[3]
-        y = x / 4
-        return y
+    elif int(Gpa) > 80:
+        print ("Your letter grade is - B")
+        Letter = str("B")
 
-def lettergrade(percentgrade):
-        if percentgrade >= 92.5:
-            return('You have an A')
-        elif percentgrade >= 88:
-            return('You have a B')
-        elif percentgrade >= 78:
-            return('You have a C')
-        elif percentgrade >= 72:
-            return ('You have a D')
-        elif percentgrade >= 65:
-            return ('You have a F')
-        else:
-            return('where were you all this time?')
+    elif int(Gpa) > 70:
+        print ("Your letter grade is - C")
+        Letter = str("C")
+
+    elif int(Gpa) > 60:
+        print ("Your letter grade is - D")
+        Letter = str("D")
+
+    else:
+        print ("Your letter grade is - F")
+        Letter = str("F")
+
+    if (Letter == "A") or (Letter == "B") or (Letter == "C"):
+        print ("You are passing.")
+
+    else:
+        print ("You are failing.")
+
 
 
 main()
