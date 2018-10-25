@@ -1,70 +1,54 @@
-def main () :
-    print("Bellarmine Student grade point average")
-    yearinschool()
-    print ()
-    grades()
+def main():
+    whatGrade = input('What grade are you in?')
+    schoolYear = gradeName(whatGrade)
+    print(schoolYear)
+    gradeList = []
+    grades = input('How many grades?')
+    print(grades)
+    for x in range (0, int(grades)):
+        myGrades = float(input('Give a number grade.'))
+        gradeList.insert(x, myGrades)
+    print (gradeList)
+    average = avgGrade(gradeList)
+    print('Your average grade is a ' +str(average) + ' percent.')
+    gradeLetter = letterGrade(average)
+    print(gradeLetter)
 
 
-
-def yearinschool () :
-    numGrade = int(input ("What grade are you in? - "))
-    if numGrade == 9:
-        print ("You are a freshman")
-    elif numGrade == 10:
-        print ("You are a sophmore")
-    elif numGrade == 11:
-        print ("You are a junior")
-    elif numGrade == 12:
-        print ("Your a senior")
+def gradeName(yearGrade):
+    if yearGrade == str(9):
+        return 'You are a freshman.'
+    elif yearGrade == str(10):
+        return 'You are a sophmore.'
+    elif yearGrade == str(11):
+        return 'You are a junior.'
+    elif yearGrade == str(12):
+        return 'You are a senior'
     else:
-        print ("You skipped highschool!")
+        return 'You must not be in highschool.'
+
+def avgGrade(list):
+    sum = 0.0
+    for grades in list:
+        sum = sum +grades
+    print(sum)
+    average = sum/len(list)
+    return average
 
 
-def grades () :
-    num1 = float(input ("Put in your first grade number - "))
-    num2 = float(input ("Put in your second grade number - "))
-    num3 = float(input ("Put in your third grade number - "))
-    num4 = float(input ("Put in your fourth grade number - "))
 
-    List1 = [0] * 4
-    List1 [0] = num1
-    List1 [1] = num2
-    List1 [2] = num3
-    List1 [3] = num4
-
-    ListL = len (List1)
-    ListA = List1.pop (0) + List1.pop (0) + List1.pop (0) + List1.pop (0)
-
-    Gpa = ListA / ListL
-    print ()
-    print ("Your percentage avergae is - " + str(Gpa) )
-
-    if int(Gpa) > 90:
-        print ("Your letter grade is - A")
-        Letter = str("A")
-
-    elif int(Gpa) > 80:
-        print ("Your letter grade is - B")
-        Letter = str("B")
-
-    elif int(Gpa) > 70:
-        print ("Your letter grade is - C")
-        Letter = str("C")
-
-    elif int(Gpa) > 60:
-        print ("Your letter grade is - D")
-        Letter = str("D")
-
+def letterGrade(x):
+    if float(x) >= 93:
+        return'You have an A'
+    elif float(x) >= 82:
+        return 'You have a B'
+    elif float(x) >= 72:
+        return 'You have a C'
+    elif float(x) >= 62:
+        return 'You have a D'
     else:
-        print ("Your letter grade is - F")
-        Letter = str("F")
-
-    if (Letter == "A") or (Letter == "B") or (Letter == "C"):
-        print ("You are passing.")
-
-    else:
-        print ("You are failing.")
-
+        return 'You are failing'
 
 
 main()
+
